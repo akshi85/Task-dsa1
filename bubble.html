@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [2,34,56,2,1,6]
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let temp = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = temp
+                    }
+                }
+            }
+            console.log(arr);
+
+
+        // single array of bubble sort
+        function bubbole() {
+            let arr = [32, 3, 5, 6, 78, 9, 24, 35, 7, 88, 998, 77, 665, 4, 1458, 1]
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let temp = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = temp
+                    }
+                }
+                // find
+                let min = arr[0];
+                let max = 0;
+                let smax = 0;
+
+                for (let i = 0; i < arr.length; i++) {
+                    // find min
+                    let num = arr[i];
+                    if (num < min) {
+                        min = num;
+                    }
+                    // find max
+                    if (num > max) {
+                        max = num
+                    }
+                }
+                // find secondmax
+                for (let i = 0; i < arr.length; i++) {
+                    let num = arr[i];
+                    if (num > smax && num < max) {
+                        smax = num;
+                    }
+                }
+                let obj = {
+                    max: max,
+                    min: min,
+                    smax: smax,
+                    arr: arr,
+                }
+                return obj
+            }
+            return arr
+        }
+        console.log("Ascending order one array of Bubble sort:", bubbole());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // add element an array
+        function AddNumber() {
+            let arr = [12, 23, 58, 456, 14, 58, 25, 789, 15, 10]
+            let d = [...arr]
+            let ind = 5
+            let element = 111
+
+            arr.push("x")
+            for (let i = ind; i < arr.length; i++) {
+                arr[i] = d[i - 1]
+            }
+            arr[ind] = element
+            return arr
+        }
+        console.log("Add number of Array:", AddNumber());
+
+         // remove element an arary
+         function Remove() {
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            let ind = 6
+            for (let i = ind; i < arr.length; i++) {
+                arr[i] = arr[i + 1]
+            }
+            arr.length = arr.length - 1
+            return arr
+        }
+        console.log("Remove element of an array:", Remove());
+
+
+        let arr=[2,34,6,7,5,3,4,7];
+        console.log(arr);
+        let element =3;
+        let found=false;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]==element) {
+                found=true;              
+            }
+            
+        }
+
+        if (found) {
+            console.log("true");
+        }
+    </script>
+</body>
+</html>
